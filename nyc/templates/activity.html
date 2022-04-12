@@ -1,3 +1,12 @@
+<!--displaying the borough-->
+<h1>{{ borough|title }}</h1>
 
-
-<h1>Its working!</h1>
+<ul>
+    <!--looping through the venues-->
+    {% for venue in venues %}
+    <li>
+        <!--creating an anchor tag to take the user to the venue -->
+        <a href="{%url 'venue' borough activity venue %}">{{ venue|title }}</a>
+    </li>
+    {% endfor %} <!--ending the loop-->
+</ul>

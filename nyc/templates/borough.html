@@ -1,11 +1,14 @@
+<!--displaying the boroughs-->
 <h1>{{ borough | title }}</h1>
 
+<!--looping through the 'activities'-->
 <ul>
     {% for activity in activities %}
     <li>
+        <!--Creating an anchor tag that takes the user to 'activities'-->
         <a href="{% url 'activity' borough activity %} "
             >{{ activity|title }}</a
         >
     </li>
-    {% endfor %}
+    {% endfor %} <!--ending the loop-->
 </ul>

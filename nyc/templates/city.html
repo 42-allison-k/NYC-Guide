@@ -5,7 +5,9 @@
 </p>
 
 <ul>
+    <!--looping through the boroughs-->
     {% for borough in boroughs %}
+    <!--creating an anchor tag that takes the user to the borough-->
     <li><a href="{% url 'borough' borough %}">{{ borough|title }}</a></li>
-    {% endfor %}
+    {% endfor %}<!--ending the loop-->
 </ul>
